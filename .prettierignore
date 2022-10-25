@@ -1,0 +1,8 @@
+.next
+.vscode
+.yarn
+.editorconfig
+.pnp.cjs
+.pnp.loader.mjs
+out
+yarn.lock
