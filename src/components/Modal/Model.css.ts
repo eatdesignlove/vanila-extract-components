@@ -1,5 +1,6 @@
 import { style } from '@vanilla-extract/css';
 import { vars } from '../shared/theme.css';
+import { responsive } from '../shared/utils';
 
 export const container = style({
 	position: 'fixed',
@@ -18,20 +19,29 @@ export const isShow = style({
 	background: 'rgba(0,0,0,0.5)',
 });
 
-export const modal = style({
-	position: 'absolute',
-	top: '5%',
-	left: '50%',
-	transform: 'translateX(-50%) scale(0.75) ',
-	transition: 'transform 0.25s',
-	zIndex: 1,
-	borderRadius: '16px',
-	padding: `${vars.space.x4} ${vars.space.x8} ${vars.space.x20}`,
-	background: '#fff',
-
-	selectors: {
-		[`${isShow} &`]: {
-			transform: 'translateX(-50%) scale(1)',
+export const modal = style([
+	{
+		position: 'absolute',
+		top: '5%',
+		left: '50%',
+		transform: 'translateX(-50%) scale(0.75) ',
+		transition: 'transform 0.25s',
+		zIndex: 1,
+		borderRadius: '16px',
+		padding: `${vars.space.x4} ${vars.space.x8} ${vars.space.x20}`,
+		background: '#fff',
+		selectors: {
+			[`${isShow} &`]: {
+				transform: 'translateX(-50%) scale(1)',
+			},
 		},
 	},
-});
+	responsive({
+		md: {
+			background: 'red',
+		},
+		lg: {
+			background: 'yellow',
+		},
+	}),
+]);
