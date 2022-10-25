@@ -1,4 +1,9 @@
-import { createGlobalTheme, createThemeContract, createTheme, style } from '@vanilla-extract/css';
+import {
+	createGlobalTheme,
+	createThemeContract,
+	createTheme,
+	styleVariants,
+} from '@vanilla-extract/css';
 
 const shared = createGlobalTheme('#app', {
 	font: {
@@ -18,17 +23,11 @@ const shared = createGlobalTheme('#app', {
 	},
 });
 
-const typography = {
-	body2: style({
-		fontSize: 24,
-	}),
-	body1: style({
-		fontSize: 16,
-	}),
-	caption: style({
-		fontSize: 12,
-	}),
-};
+const typography = styleVariants({
+	body2: [{ fontSize: 24 }],
+	body1: [{ fontSize: 16 }],
+	caption: [{ fontSize: 12 }],
+});
 
 const color = createThemeContract({
 	primary: null,

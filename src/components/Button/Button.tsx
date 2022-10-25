@@ -13,10 +13,12 @@ type Types = {
 
 function Button({ variant = 'normal', size, children, as, href, onClick }: Types) {
 	if (as === 'link') {
-		return <a href={href} className={cx(styles[variant], styles[size])} onClick={onClick} />;
+		return (
+			<a href={href} className={cx(styles.variant[variant], styles.size[size])} onClick={onClick} />
+		);
 	}
 	return (
-		<button className={cx(styles[variant], styles[size])} onClick={onClick}>
+		<button className={cx(styles.variant[variant], styles.size[size])} onClick={onClick}>
 			{children}
 		</button>
 	);
