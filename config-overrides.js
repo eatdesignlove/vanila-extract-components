@@ -3,6 +3,6 @@ const { VanillaExtractPlugin } = require('@vanilla-extract/webpack-plugin');
 
 // eslint-disable-next-line no-undef
 module.exports = function override(config, env) {
-	config.plugins = [new VanillaExtractPlugin()];
+	config.plugins = [...config.plugins, new VanillaExtractPlugin()];
 	return config;
 };
