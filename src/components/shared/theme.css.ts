@@ -5,6 +5,7 @@ const shared = createGlobalTheme('#app', {
 		body: 'arial',
 	},
 	space: {
+		x20: '40px',
 		x10: '20px',
 		x9: '18px',
 		x8: '16px',
