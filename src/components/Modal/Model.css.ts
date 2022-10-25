@@ -1,6 +1,5 @@
 import { style } from '@vanilla-extract/css';
-import { vars } from '../shared/theme.css';
-import { responsive } from '../shared/utils';
+import { vars, responsive } from '../shared';
 
 export const container = style({
 	position: 'fixed',
