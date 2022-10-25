@@ -6,6 +6,9 @@ const base = style({
 	border: 'none',
 	color: vars.color.text,
 	borderRadius: '4px',
+	':hover': {
+		opacity: 0.9,
+	},
 });
 
 export const primary = style([
